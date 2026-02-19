@@ -6,6 +6,7 @@ const navLinks = [
     { label: 'Projects', href: '#projects' },
     { label: 'Services', href: '#services' },
     { label: 'Contact', href: '#contact' },
+    { label: '🥙 Store Demo', href: 'https://store.harisms.com', external: true },
 ];
 
 export default function Navbar() {
@@ -21,8 +22,8 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-                    ? 'bg-navy-950/80 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20'
-                    : 'bg-transparent'
+                ? 'bg-navy-950/80 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20'
+                : 'bg-transparent'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,6 +44,7 @@ export default function Navbar() {
                             <a
                                 key={l.label}
                                 href={l.href}
+                                {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                                 className="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white rounded-lg hover:bg-white/[0.06] transition-all duration-200"
                             >
                                 {l.label}
@@ -77,6 +79,7 @@ export default function Navbar() {
                         <a
                             key={l.label}
                             href={l.href}
+                            {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                             onClick={() => setMobileOpen(false)}
                             className="block px-4 py-3 text-sm font-medium text-slate-400 hover:text-white rounded-lg hover:bg-white/[0.06] transition-colors"
                         >

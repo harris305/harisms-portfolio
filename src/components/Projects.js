@@ -15,7 +15,7 @@ const projects = [
             'A complete point-of-sale system with real-time order management, integrated Square checkout, and kitchen display. Built for a San Antonio restaurant.',
         tags: ['React', 'Node.js', 'Square API', 'WebSockets'],
         color: 'amber',
-        href: '/demo',
+        href: 'https://store.harisms.com',
     },
     {
         icon: MapPin,
